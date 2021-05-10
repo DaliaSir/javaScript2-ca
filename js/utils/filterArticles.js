@@ -8,7 +8,7 @@ export function filterArticles(articles) {
         const searchValue = event.target.value.replace(/\s/g, "").toLowerCase();
 
         const filteredValues = articles.filter((article) => {
-            if (article.author.replace(/\s/g, "").toLowerCase().startsWith(searchValue)) {
+            if (article.author.replace(/\s/g, "").toLowerCase().includes(searchValue)) {
                 return true;
             }
         });
